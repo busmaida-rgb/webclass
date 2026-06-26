@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 태그</title>
+</head>
+<body>
+    <h1>이미지 태그</h1>
+    <img src="./img/donut.jpg" alt="도넛 사진">
+    <p>이미지 태그는 문맥적인 뜻 없다. 글자와 같은 콘텐츠이다.</p>
+    <p style="font-size: 100px;">
+        와 <img style="height:100px" src="./img/donut.jpg" alt="도넛 사진">이다
+    </p>
+    <h2>반응형 이미지 설정</h2>
+    <picture>
+        <source media="(max-width:768px)" srcset="./img/cup-640.jpg">
+        <source media="(max-width:1200px)" srcset="./img/cup-1024.jpg">
+        <source media="(min-width:1201px)" srcset="./img/cup-1600.jpg">
+        <img src="./img/cat-640.jpg" alt="컵케잌 사진">
+    </picture>
+</body>
+</html>
