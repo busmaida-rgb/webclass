@@ -1,0 +1,57 @@
+html{
+    font-size: 16px;
+    font-family: "Paperlogy",'Aggravo',"Inter",sans-serif;
+}
+.a{
+    font-size: 2rem;
+}
+.b{
+    font-size: 16px;
+}
+.b p{
+    font-size: 1em;
+    /* font-weight: 600; */
+    /* line-height: 150%; */
+}
+address{
+    font-style: normal;
+}
+.c{
+    letter-spacing: -3px;
+    word-spacing: 20px;
+}
+.d{
+    white-space: nowrap;
+}
+.e{
+    text-indent:50%;
+    text-transform: capitalize;
+    word-break: keep-all;
+}
+.g{
+    text-align: right;
+    text-decoration: underline;
+}
+.h{
+    font-family: "Paperlogy";
+}
+.h #hh2{
+    font-family: "Paperlogy";
+    font-weight: 900;
+}
+.h #hh1{
+    font-family: "Paperlogy";
+    font-weight: 600;
+}
+.h #hh0{
+    font-family: "Paperlogy";
+    font-weight: 200;
+}
+.i{
+    font-family: 'Aggravo';
+    font-weight: 700;
+}
+.j{
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
