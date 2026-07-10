@@ -1,0 +1,44 @@
+*{margin:0;padding:0;}
+.a{
+    border: 1px solid #000;
+    height: 1500px;
+    background-color: aqua;
+    background-image: url("../img/capy.jpg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 100px) 200px;
+    background-size: 500px 50%;
+}
+.b{
+    border: 1px solid #000;
+    height: 1500px;
+    background: aqua url("../img/capy.jpg") no-repeat calc(100% - 100px) 200px / auto 50%;
+}
+.c{
+    border: 1px solid red;
+    height: 1000px;
+    background: pink url("../img/capy.jpg") no-repeat 50% 50% / contain;
+    background-blend-mode: multiply;
+}
+.d{
+    border: 1px solid red;
+    height: 1000px;
+    background:
+    url("../img/capy.jpg") no-repeat 50% 50% / 400px auto,
+    url("../img/ham.jpg") no-repeat 50% 60% / 400px auto,
+    url("../img/mouse.jpg") no-repeat 50% 70% / 400px auto;
+}
+.e{
+    border: 1px solid red;
+    height: 1000px;
+    background: 
+    url(../img/ham.jpg) no-repeat 50% 50% / 800px auto,
+    linear-gradient(30deg,rgba(255, 0, 0, 1) 40%,blue 60%,pink 80%);
+}
+.e .box{
+    width: 400px;
+    height: 800px;
+    background-color: rgba(255,255,255,0.5);
+    margin: 0 auto;
+    margin-top: 100px;
+    backdrop-filter: blur(5px);
+}
