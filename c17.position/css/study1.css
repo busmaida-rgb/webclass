@@ -1,0 +1,37 @@
+*{margin: 0;padding: 0;}
+.box{
+    border: 10px solid black;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    /* 이걸 입력하면 움직일 수 있는 준비가 됨 */
+    right: 0px;
+    bottom: 0px;
+}
+.box .a{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    /* position이 설정되어있는 가까운 조상태그 기준으로 배치됨 */
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+    /* 위아래 정렬 디폴트0*/
+}
+.box .b{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    z-index: 0;
+}
+.box .c{
+    background-color: green;
+    position: fixed;
+    /* absolute처럼 공중에뜸 근데 기준영역이 화면 */
+    right: 0;
+    top: 0;
+}

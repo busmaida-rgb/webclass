@@ -1,0 +1,164 @@
+*{margin:0;padding:0;}
+.box{
+    width:800px;
+    background: #bebebe;
+    margin: 200px auto;
+}
+.a{background-color: red;}
+.b{background-color: green;}
+.c{background-color: blue;}
+.d{background-color: gold;}
+.e{background-color: pink;}
+
+.box1{
+    display: flex;
+}
+.box1 section{
+    width: 100px;
+    height: 100px;
+}
+
+.box2{
+    display: flex;
+}
+.box2 section{
+    width: 100px;
+    height: 100px;
+}
+
+.box3{
+    display: flex;
+    justify-content: flex-end;
+}
+.box3 section{
+    width: 100px;
+    height: 100px;
+}
+
+.box4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+.box4 section{
+    width: 100px;
+    height: 100px;
+}
+
+.box5{
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    height: 300px;
+}
+.box5 section{
+    width: 100px;
+    height: 100px;
+}
+
+.box6{
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+}
+.box6 section{
+    width: 400px;
+    height: 100px;
+}
+
+.box7{
+    display: flex;
+    justify-content: space-between;
+}
+.box7 section{
+    width: 100px;
+    height: 100px;
+}
+.a7{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+.b7{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.box8{
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+}
+.box8 div{display: flex;}
+.box8 section{
+    width: 100px;
+    height: 100px;
+}
+.box8-2{flex-direction: row-reverse;}
+
+.box9{
+    display: flex;
+    height: 300px;
+}
+.box9-1{
+    display: flex;
+    flex-basis: 500px;
+}
+.box9-1 section{
+    flex: 1;
+}
+.box9-2{flex-basis: 300px;}
+.box9-2 section{
+    height: 100px;
+}
+
+.box10{
+    display: flex;
+    height: 300px;
+}
+.box10>section{
+    width: 250px;
+}
+.box10-2{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    order: 2;
+}
+.box10-2>section{
+    height: 100px;
+}
+.box10-3{
+    display: flex;
+    height: 200px;
+}
+.box10-3>section{flex: 1};
+.box10 .a{order: 1;}
+.box10 .b{order: 3;}
+
+.box11{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+}
+.box11-1{
+    width: 200px;
+}
+.box11-1 section{
+    height: 100px;
+}
+.box11-2{
+    display: flex;
+}
+.box11-2 section{
+    width: 100px;
+    height: 100px;
+}
+.box11 .e{
+    width: 200px;
+    align-self: stretch;
+}
