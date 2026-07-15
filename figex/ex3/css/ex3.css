@@ -2,6 +2,10 @@ html{
     font-family: 'Pretendard';
     font-size: 20px;
 }
+main{
+    background: url(../img/BACKGROUND.png) no-repeat 50% 721px;
+}
+.point-type{font-family: "Aboreto", system-ui;}
 .banner{
     background: url(../img/img1.png) no-repeat 50% 50% / cover;
     height: 599px;
@@ -11,7 +15,6 @@ html{
     align-items: center;
 }
 .banner h1{
-    font-family: "Aboreto", system-ui;
     font-size: 2.5rem;
     color: white;
     line-height: 100%;
@@ -21,46 +24,50 @@ html{
     width: 1600px;
     margin: 0 auto;
 }
-.heading2{
-    margin-bottom: 100px;
-}
-.heading2 h2{
-    font-family: "Aboreto", system-ui;
-    font-size: 5.5rem;
-    line-height: 90%;
+.con1{
+    padding-top: 10rem;
+    background: url(../img/deco.svg) no-repeat 50% 0;
     text-align: center;
+    margin-bottom: 5rem;
+}
+.con1 h2{
+    font-size: 7.5rem;
+    line-height: 90%;
     text-transform: uppercase;
     margin-bottom: 2rem;
 }
-.heading2 p{
+.con1 p{
     line-height: 140%;
-    text-align: center;
     text-transform: uppercase;
 }
 span{
     color: #770000;
 }
-.container figure{
+.cafe-figure{
     display: flex;
+    gap: 1rem;
     margin-bottom: 2.5rem;
 }
-.container figure img{
-    border-radius: 20px;
-    width: 790px;
-    height: 434px;
-    object-fit: cover;
+.cafe-figure figure{
+    flex: 1;
+    line-height: 0;
 }
-.para h3{
-    font-family: "Aboreto", system-ui;
+.cafe-figure figure img{
+    width: 100%;
+    aspect-ratio: 790/434;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.con2 h3{
     font-size: 2rem;
     line-height: 140%;
     text-transform: uppercase;
     margin-bottom: 1rem;
 }
-.description p{
+.con2 p{
     font-size: 1rem;
     line-height: 140%;
 }
-.pa{
+.con2 h3+p{
     margin-bottom: 0.5rem;
 }
