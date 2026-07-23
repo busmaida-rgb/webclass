@@ -5,8 +5,28 @@
     margin: 200px auto;
     transition: all 1s ease 0s;
 }
+.box-wrap{
+    perspective: 300px;
+    border: 1px solid blue;
+    /* perspective-origin: 0 0; */
+}
 .a{background-color: red;}
 .a:hover{
-    transform: translateX(50%);
+    transform: translate3d(100px, 200px, 100px);
     /* transform의 %는 부모태그가 아니라 본인거다 */
+}
+.b{background-color: lime;}
+.b:hover{
+    transform: rotateY(360deg);
+}
+.c{
+    background-color: blue;
+    transform-origin: 0% 0%;
+}
+.c:hover{
+    transform: scale(1.5);
+}
+.d{background-color: green;}
+.d:hover{
+    transform: skew(30deg);
 }
