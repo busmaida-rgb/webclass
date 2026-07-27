@@ -13,12 +13,14 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .banner h1{
-    font-size: 2.5rem;
+    font-size: 50px;
     color: white;
     line-height: 100%;
     text-transform: uppercase;
+    text-align: center;
 }
 .container{
     width: 1600px;
@@ -31,7 +33,7 @@ main{
     margin-bottom: 5rem;
 }
 .con1 h2{
-    font-size: 7.5rem;
+    font-size: 150px;
     line-height: 90%;
     text-transform: uppercase;
     margin-bottom: 2rem;
@@ -47,6 +49,7 @@ span{
     display: flex;
     gap: 1rem;
     margin-bottom: 2.5rem;
+    max-width: 100%;
 }
 .cafe-figure figure{
     flex: 1;
@@ -70,4 +73,52 @@ span{
 }
 .con2 h3+p{
     margin-bottom: 0.5rem;
+}
+
+
+
+@media(max-width:1640px){
+    .container{
+        margin: 0 2rem;
+        width: auto;
+    }
+}
+@media(max-width:1024px){
+    html{
+        font-size: 18px;
+    }
+    .con1 h2{
+        font-size: 80px;
+    }
+    .cafe-figure figure img{
+        aspect-ratio: 467/434;
+    }
+}
+@media(max-width:768px){
+    html{
+        font-size: 14px;
+    }
+    .con1 h2{
+        font-size: 50px;
+    }
+    .banner{
+        border-radius: 0 0 80px 80px;
+    }
+    .cafe-figure{
+        flex-direction: column;
+    }
+    .cafe-figure figure img{
+        aspect-ratio: 365/200;
+    }
+    .container{
+        margin: 0 1rem;
+    }
+    .con1 {
+    background: url(../img/deco.svg) no-repeat 50% -30px;
+    }
+}
+@media(max-width:340px){
+    .con1 h2 {
+    font-size: 44px;
+}
 }
