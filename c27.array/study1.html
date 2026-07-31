@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    <h1>배열 - array</h1>
+    <p>연관된 데이터들을 모아놓은 집합</p>
+    <p>배열은 ,(콤마)로 구분하여 원소를 여러 개 입력할 수 있다.</p>
+    <script>
+        let a = [1,2,3,'안녕']
+        console.log(a[3][1])
+        
+        let fruits = ['멜론','자두','사과','복숭아','배','딸기']
+        console.log(fruits)
+        fruits.pop()
+        console.log(fruits)
+        fruits.push('바나나')
+        console.log(fruits)
+        fruits.splice(2,2,'샤인머스켓','참외')
+        console.log(fruits)
+
+        let classmate = [
+            '유채린',
+            '배수정',
+            '최윤성',
+            '최선미',
+            '김가온',
+        ]
+        let newClass = [
+            ...classmate,
+            '안정현',
+            '윤희정',
+        ]
+        // 기존의 배열을 원소로 넣을때 쓰는거임
+        console.log(newClass)
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bmi</title>
+    <link rel="stylesheet" href="./css/ex2.css">
+</head>
+<body>
+    <main>
+        <h1>나의 체질량 지수(BMI)</h1>
+        <p>체질량지수는 자신의 몸무게(kg)를 키의 제곱(m)으로 나눈 값입니다. 체질량지수는 근육량, 유전적 원인, 다른 개인적 차이를 반영하지 못하는 단점이 있음에도 불구하고 조사자들이나 의료인들이 가장 많이 쓰는 방법 중 하나입니다.</p>
+        <script>
+            let userName = prompt('이름을 입력하세요');
+            let userWei = Number(prompt('체중(kg)을 입력하세요'));
+            let userHei = Number(prompt('키(cm)를 입력하세요'));
+            let userBMI = (userWei / (userHei / 100) ** 2).toFixed(2);
+            let grade = userBMI>=25?'비만':userBMI>=23?'과체중':userBMI>=18.5?'정상':'저체중'
+            document.write(`
+            <table>
+                <tr>
+                    <th>이름</th>
+                    <td>${userName}</td>
+                </tr>
+                <tr>
+                    <th>체중</th>
+                    <td>${userWei}kg</td>
+                </tr>
+                <tr>
+                    <th>키</th>
+                    <td>${userHei}cm</td>
+                </tr>
+                <tr>
+                    <th>bmi지수</th>
+                    <td>${userBMI}</td>
+                </tr>
+            </table>
+            `)
+        </script>
+        <section class="bmi-range" aria-label="BMI 지수에 따른 체중 범위">
+            <div class="bmi-scale">
+                <span class="scale-title">BMI</span>
+                <span class="scale-number number-18">18.5</span>
+                <span class="scale-number number-23">23</span>
+                <span class="scale-number number-25">25.00</span>
+            </div>
+            <div class="range-bar">
+                <div class="range underweight">저체중</div>
+                <div class="range normal">정상</div>
+                <div class="range overweight">과체중</div>
+                <div class="range obesity">비만</div>
+            </div>
+            <p class="range-caption">체중</p>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,76 @@
+:root {
+    --primary-color: #4f6bed;
+    --primary-dark: #354bb4;
+    --background-color: #f3f6ff;
+    --table-color: #ffffff;
+    --border-color: #dce3f5;
+    --text-color: #26324b;
+    --highlight-color: #eef1ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    font-family: Arial, "맑은 고딕", sans-serif;
+    background-color: var(--background-color);
+}
+
+table {
+    width: 420px;
+    overflow: hidden;
+    border: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 16px;
+    background-color: var(--table-color);
+    box-shadow: 0 12px 30px rgba(53, 75, 180, 0.15);
+}
+
+caption {
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+th,
+td {
+    padding: 16px 24px;
+    border: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    width: 40%;
+    color: #ffffff;
+    background-color: var(--primary-color);
+}
+
+td {
+    text-align: right;
+    font-weight: 600;
+}
+
+tr:hover td {
+    background-color: var(--highlight-color);
+}
+
+tr:last-child th,
+tr:last-child td {
+    border-bottom: 0;
+}
+
+tr:nth-last-child(-n + 2) td {
+    color: var(--primary-dark);
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--highlight-color);
+}
