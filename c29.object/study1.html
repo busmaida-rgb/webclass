@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object - 객체 사물</title>
+</head>
+<body>
+    <script>
+        let person = {name:"최윤성", gender:"남자", married:false}
+        console.log(person)
+        let person2 = {name:'박민주',gender:'여자',married:true}
+        let newPerson = {...person, age:44} //...을 전개연산자라고 한다
+        console.log(newPerson)
+    </script>
+</body>
+</html>
