@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>값으로써 사용되는 함수</title>
+</head>
+<body>
+    <script>
+        a()
+        function a(){
+            alert('aaa')
+        } // 호이스팅이 된다
+
+        let b = function(){
+            alert('bbb')
+        } //익명함수(동작함수).. 호이스팅 안됨
+        b()
+
+        let c = ()=>{
+            alert('ccc')
+        } //화살표 함수
+        c()
+
+        let d = (name)=>{
+            alert(name+"님 반갑습니다.")
+        }
+        d('최윤성')
+
+        let g = name=>
+            alert(name+"님 반갑습니다.")
+        //매개변수 하나일땐 화살표함수에선 괄호 생략 가능, 한줄이면 중괄호 생략가능
+        g('최윤성')
+
+        let sum = (a,b)=>{
+            return a+b
+        }
+        alert(sum(1,2))
+
+        let sum2 = (a,b)=>a+b //return도 생략가능함(중괄호 생략시 자동리턴됨)
+        alert(sum2(3,4))
+
+        function abc(a){
+            a()
+        }
+        abc(function(){})
+    </script>
+</body>
+</html>

@@ -12,19 +12,39 @@
         // prompt()
         // Number()
 
-        function a(){
-            alert('안녕하세요')
-        }
-        a()
-        function b(name){
-            document.write(`<p>${name}님 안녕하세요`)
-        } //name -> 매개변수
-        b('정현진') //인자
-        b('정선민')
+        // function a(){
+        //     alert('안녕하세요')
+        // }
+        // a()
+        // function b(name){
+        //     document.write(`<p>${name}님 안녕하세요`)
+        // } //name -> 매개변수
+        // b('정현진') //인자
+        // b('정선민')
 
         function c(person){
-            
+            document.write(`<p>${person[0]}님 반갑습니다.</p>`)
+            document.write(`<p>${person[0]}님은 ${person[1]}세이시군요.</p>`)
         }
+        c(['최윤성',28])
+
+        function d(person){
+            document.write(`<p>${person.name}님 반갑습니다.</p>`)
+            document.write(`<p>${person.name}님은 ${person.age}세이시군요.</p>`)
+        }
+        d({name:'최윤성', age:28})
+
+        function g(name){
+            document.write(`<p>${name}님 반갑습니다.</p>`)
+            return {name}
+        }
+        let user = g('최윤성')
+        // alert(user.name)
+
+        function getAver(score){
+            return (score[0]+score[1]+score[2])/3
+        }
+        alert(getAver([80,90,95]))
     </script>
 </body>
 </html>
