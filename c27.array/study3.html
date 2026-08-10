@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 함수</title>
+</head>
+<body>
+    <script>
+        // let fruits = ['사과', '수박', '복숭아','멜론'];
+        // fruits.forEach(function(el,index,array){
+        //     console.log(el,index,array)
+        // });
+        // 첫번째 매개변수엔 원소, 두번째는 순번, 세번째는 전체 배열이 들어간다.
+
+        // fruits.forEach(el=>console.log(el));
+
+        // let fruits = ['사과', '수박','복숭아'];
+        // let newFruit = fruits.map(el=>el+'당');
+        // console.log(fruits,newFruit);
+
+        let a = [1,2,3,4,5,6,7,8,9,10];
+        let b = a.filter(function(el){return el>=10});
+        console.log(b);
+    </script>
+</body>
+</html>
