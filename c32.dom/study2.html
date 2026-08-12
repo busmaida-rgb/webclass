@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .b.on{
+            background-color: red;
+            color:#fff;
+        }
+    </style>
+    <title>태그의 속성 편집하기</title>
+</head>
+<body>
+    <figure>
+        <img src="./img/정선민.png" alt="정선민" class="a">
+        <figcaption class="b">정선민</figcaption>
+    </figure>
+    <script>
+        const img = document.querySelector('.a');
+        // alert(img.getAttribute('src'));
+        // img.setAttribute('src','./img/최윤성.png');
+        // alert(img.getAttribute('src'));
+        const figcaption = document.querySelector('.b');
+        figcaption.innerHTML = '<i>정선민</i>';
+        figcaption.classList.add('on');
+        figcaption.classList.remove('on');
+    </script>
+
+    <ul class="list">
+        <li>1</li>
+        <li class="me">2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        let me = document.querySelector('.me');
+        me.parentElement.style.border = '2px solid green';
+        me.nextElementSibling.nextElementSibling.style.color = 'blue';
+        me.previousElementSibling.style.color = 'pink';
+        console.log(me.parentElement.previousElementSibling);
+        let list = document.querySelector('.list');
+        let listTags = list.children // [{},{},{},{},...]
+        listTags[1].style.color = 'red';
+        me.parentElement.previousElementSibling.previousElementSibling.children[0].setAttribute('src','./img/최윤성.png')
+    </script>
+</body>
+</html>
