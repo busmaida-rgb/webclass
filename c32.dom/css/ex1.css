@@ -1,0 +1,33 @@
+html{font-size: 20px;}
+h1{font-size: 3rem;}
+h2{font-size:1.4rem;}
+p{font-size:0.8rem;}
+.fontControl {
+    display: flex;
+    gap: 0.5rem;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    top: 0;
+    align-items: center;
+    transform: translateX(calc(100% - 2.3rem));
+    transition: all .5s ease 0s;
+}
+.fontControl.on{
+    transform: translate(0px);
+}
+.fontControl span{
+    padding: .4rem 1.3rem;
+    border-radius: 100px;
+    box-shadow: 0 0 10px #ccc;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+#btn-toggle{
+    padding: 0;
+    width: 1.8rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
