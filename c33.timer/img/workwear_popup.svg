@@ -1,0 +1,97 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- twill / canvas weave texture -->
+    <pattern id="twill" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#E7DCC0"/>
+      <rect width="4" height="8" fill="#DDD0AF"/>
+    </pattern>
+
+    <pattern id="denim" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#25231F"/>
+      <rect width="3" height="6" fill="#2C2A25"/>
+    </pattern>
+
+    <radialGradient id="rivet" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#9A9184"/>
+      <stop offset="55%" stop-color="#6E6659"/>
+      <stop offset="100%" stop-color="#4A443A"/>
+    </radialGradient>
+
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.04 0"/>
+    </filter>
+  </defs>
+
+  <!-- outer denim frame -->
+  <rect width="500" height="500" fill="url(#denim)"/>
+  <rect width="500" height="500" fill="#000000" opacity="0.12"/>
+
+  <!-- inner canvas tag card -->
+  <rect x="22" y="22" width="456" height="456" rx="6" fill="url(#twill)"/>
+  <rect x="22" y="22" width="456" height="456" rx="6" fill="#3E3223" opacity="0.06"/>
+
+  <!-- stitched border -->
+  <rect x="34" y="34" width="432" height="432" rx="4" fill="none"
+        stroke="#BE4A25" stroke-width="2.5" stroke-dasharray="7 6" opacity="0.85"/>
+
+  <!-- corner rivets -->
+  <circle cx="46" cy="46" r="7" fill="url(#rivet)"/>
+  <circle cx="454" cy="46" r="7" fill="url(#rivet)"/>
+  <circle cx="46" cy="454" r="7" fill="url(#rivet)"/>
+  <circle cx="454" cy="454" r="7" fill="url(#rivet)"/>
+
+  <!-- close X (popup affordance) -->
+  <g transform="translate(444,60)" stroke="#5A5245" stroke-width="2.5" stroke-linecap="round" opacity="0.75">
+    <line x1="-7" y1="-7" x2="7" y2="7"/>
+    <line x1="7" y1="-7" x2="-7" y2="7"/>
+  </g>
+
+  <!-- grommet + hang loop -->
+  <path d="M 250 34 C 250 10, 300 10, 300 34" fill="none" stroke="#4A443A" stroke-width="6"/>
+  <circle cx="250" cy="60" r="9" fill="#25231F"/>
+  <circle cx="250" cy="60" r="9" fill="none" stroke="url(#rivet)" stroke-width="3"/>
+  <circle cx="250" cy="60" r="3" fill="#0D0C0A"/>
+
+  <!-- brand stamp circle -->
+  <g transform="translate(250,120)">
+    <circle r="34" fill="none" stroke="#565B3E" stroke-width="2"/>
+    <circle r="29" fill="none" stroke="#565B3E" stroke-width="1"/>
+    <text text-anchor="middle" y="-5" font-family="'Courier New', monospace" font-size="9"
+          letter-spacing="2" fill="#565B3E" font-weight="700">WORKWEAR CO.</text>
+    <text text-anchor="middle" y="9" font-family="'Courier New', monospace" font-size="8"
+          letter-spacing="3" fill="#565B3E">EST. NO.04</text>
+  </g>
+
+  <!-- headline stamp -->
+  <g transform="translate(250,215) rotate(-3)">
+    <text text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="52"
+          font-weight="900" fill="#2B2825" letter-spacing="1">15% OFF</text>
+    <text text-anchor="middle" y="34" font-family="Arial Black, Arial, sans-serif" font-size="20"
+          font-weight="800" fill="#BE4A25" letter-spacing="4">FIRST ORDER</text>
+  </g>
+
+  <!-- divider -->
+  <line x1="150" y1="278" x2="350" y2="278" stroke="#565B3E" stroke-width="1.5" stroke-dasharray="2 4"/>
+
+  <!-- tagline -->
+  <text x="250" y="302" text-anchor="middle" font-family="'Courier New', monospace" font-size="11"
+        letter-spacing="2.5" fill="#4A443A">JOIN THE CREW — NEWSLETTER SIGNUP</text>
+
+  <!-- email input mock -->
+  <rect x="80" y="330" width="340" height="42" rx="2" fill="#F5F0E1" stroke="#2B2825" stroke-width="1.5"/>
+  <text x="96" y="356" font-family="'Courier New', monospace" font-size="13" fill="#8A8272">your@email.com</text>
+
+  <!-- CTA button -->
+  <rect x="80" y="386" width="340" height="46" rx="2" fill="#BE4A25" stroke="#2B2825" stroke-width="1.5"/>
+  <rect x="86" y="392" width="328" height="34" rx="1" fill="none" stroke="#F5F0E1" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+  <text x="250" y="414" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="15"
+        font-weight="800" letter-spacing="2" fill="#F5F0E1">SIGN ME UP</text>
+
+  <!-- fine print -->
+  <text x="250" y="452" text-anchor="middle" font-family="'Courier New', monospace" font-size="9.5"
+        letter-spacing="1" fill="#6E6659">NO SPAM. JUST DENIM &amp; DISCOUNTS.</text>
+
+  <!-- grain overlay -->
+  <rect width="500" height="500" filter="url(#grain)" opacity="0.5"/>
+</svg>

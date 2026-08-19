@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workwear Fashion</title>
+    <script src="./js/ex1.js"></script>
+    <link rel="stylesheet" href="./css/ex1.css">
+    <style>
+        :root {
+            --bg: #f5f1ea;
+            --panel: #f8f4ee;
+            --dark: #1d1d1d;
+            --muted: #666;
+            --line: #d8cbb8;
+            --accent: #9d7b4d;
+            --accent-soft: #cfb18d;
+            --light: #fffdf9;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(180deg, #f4f0ea 0%, #efe7dc 100%);
+            color: var(--dark);
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        .container {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 22px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .nav-btn {
+            padding: 12px 18px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: rgba(255,255,255,0.25);
+            font-weight: 600;
+        }
+
+        .hero {
+            padding: 50px 0 32px;
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 8px 14px;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: rgba(255,255,255,0.4);
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.5rem, 5vw, 5rem);
+            line-height: 0.96;
+            letter-spacing: -0.06em;
+        }
+
+        .hero p {
+            max-width: 560px;
+            margin: 22px 0 28px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--muted);
+        }
+
+        .btn-wrap {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--dark);
+            color: #fff;
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--line);
+            background: rgba(255,255,255,0.4);
+            color: var(--dark);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero-visual {
+            position: relative;
+            min-height: 520px;
+            border-radius: 32px;
+            background: linear-gradient(135deg, #d6c1a2, #f2ebe2 42%, #bca47f 100%);
+            box-shadow: 0 25px 60px rgba(59, 39, 18, 0.12);
+            overflow: hidden;
+        }
+
+        .hero-visual::before {
+            content: "";
+            position: absolute;
+            inset: 22% 18% 12% 18%;
+            background: linear-gradient(160deg, rgba(28,28,28,0.92), rgba(60,52,45,0.78));
+            border-radius: 24px 24px 140px 140px;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+        }
+
+        .hero-visual::after {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            right: 52px;
+            bottom: 52px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.22);
+            filter: blur(2px);
+        }
+
+        .card-stack {
+            position: absolute;
+            inset: 0;
+        }
+
+        .stack-item {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.9);
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(4px);
+        }
+
+        .stack-item:nth-child(1) {
+            left: 52px;
+            top: 44px;
+            width: 160px;
+            height: 92px;
+            background: rgba(17, 17, 17, 0.45);
+            transform: rotate(-8deg);
+        }
+
+        .stack-item:nth-child(2) {
+            right: 56px;
+            top: 78px;
+            width: 190px;
+            height: 110px;
+            background: rgba(105, 86, 68, 0.46);
+            transform: rotate(8deg);
+        }
+
+        .stack-item:nth-child(3) {
+            left: 90px;
+            bottom: 54px;
+            width: 200px;
+            height: 110px;
+            background: rgba(60, 48, 38, 0.5);
+            transform: rotate(-10deg);
+        }
+
+        .features {
+            padding: 32px 0 18px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            padding: 28px 24px;
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            background: rgba(255,255,255,0.3);
+        }
+
+        .feature strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .feature span {
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: 0.96rem;
+        }
+
+        .collection {
+            padding: 50px 0 70px;
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 22px;
+        }
+
+        .section-head h2 {
+            margin: 0;
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            letter-spacing: -0.05em;
+        }
+
+        .section-head a {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product {
+            background: rgba(255,255,255,0.45);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 35px rgba(38, 30, 22, 0.08);
+        }
+
+        .product-image {
+            height: 260px;
+            background: linear-gradient(135deg, #b9ab98, #eee3d5, #a88a68);
+            position: relative;
+        }
+
+        .product-image::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 140px;
+            height: 170px;
+            transform: translate(-50%, -50%);
+            border-radius: 26px 26px 36px 36px;
+            background: rgba(28,28,28,0.8);
+            box-shadow: inset 0 0 0 2px rgba(255,255,255,0.08);
+        }
+
+        .product:nth-child(2) .product-image { background: linear-gradient(135deg, #cfb89d, #efe5d7, #7d6958); }
+        .product:nth-child(3) .product-image { background: linear-gradient(135deg, #d8d0c2, #efe9df, #96856e); }
+        .product:nth-child(4) .product-image { background: linear-gradient(135deg, #c3b0a4, #efe0d3, #6f564c); }
+
+        .product-info {
+            padding: 18px 18px 22px;
+        }
+
+        .product-info h3 {
+            margin: 0 0 8px;
+            font-size: 1.1rem;
+        }
+
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--muted);
+            font-size: 0.93rem;
+        }
+
+        .price {
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        @media (max-width: 900px) {
+            .hero-inner,
+            .feature-grid,
+            .product-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            nav {
+                display: none;
+            }
+
+            .feature-grid,
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-head {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .hero {
+                padding-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <p><span id="popup-second">5</span>초 뒤에 자동으로 닫힘</p>
+        <figure>
+            <img src="./img/workwear_popup.svg" alt="팝업">
+        </figure>
+        <div class="controller">
+            <span>오늘 하루 안보기</span>
+            <span class="btn-close-popup">닫기</span>
+        </div>
+    </div>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">WORKWEAR</div>
+            <nav>
+                <a href="#">New In</a>
+                <a href="#">Outerwear</a>
+                <a href="#">Tops</a>
+                <a href="#">Bottoms</a>
+                <a href="#">Accessories</a>
+            </nav>
+            <a href="#" class="nav-btn">Shop Now</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div>
+                    <div class="tag">Workwear Collection</div>
+                    <h1>Built for<br>daily work.</h1>
+                    <p>
+                        실용성은 기본, 스타일은 더한 워크웨어 패션. 견고한 소재와 세련된 실루엣으로
+                        일상 속에서도 자신감 있는 무드를 완성합니다.
+                    </p>
+                    <div class="btn-wrap">
+                        <a href="#" class="btn btn-primary">Explore Look</a>
+                        <a href="#" class="btn btn-secondary">View Story</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-label="workwear fashion illustration">
+                    <div class="card-stack">
+                        <div class="stack-item">Utility</div>
+                        <div class="stack-item">Style</div>
+                        <div class="stack-item">Comfort</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container feature-grid">
+                <article class="feature">
+                    <strong>Durable Fabric</strong>
+                    <span>튼튼한 원단과 안정적인 핏으로 오랜 시간 편하게 착용할 수 있습니다.</span>
+                </article>
+                <article class="feature">
+                    <strong>Smart Utility</strong>
+                    <span>다양한 수납 공간과 실용적인 디테일이 캐주얼한 일상에 완벽하게 어울립니다.</span>
+                </article>
+                <article class="feature">
+                    <strong>Refined Look</strong>
+                    <span>무심한 듯 세련된 컬러와 라인이 데일리 패션을 한 단계 더 업그레이드합니다.</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="collection">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Featured Pieces</h2>
+                    <a href="#">See all collection</a>
+                </div>
+
+                <div class="product-grid">
+                    <article class="product">
+                        <div class="product-image"></div>
+                        <div class="product-info">
+                            <h3>Utility Jacket</h3>
+                            <div class="meta">
+                                <span>Field Ready</span>
+                                <span class="price">₩128,000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product">
+                        <div class="product-image"></div>
+                        <div class="product-info">
+                            <h3>Relaxed Cargo</h3>
+                            <div class="meta">
+                                <span>Daily Ease</span>
+                                <span class="price">₩98,000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product">
+                        <div class="product-image"></div>
+                        <div class="product-info">
+                            <h3>Work Shirt</h3>
+                            <div class="meta">
+                                <span>Layering</span>
+                                <span class="price">₩89,000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product">
+                        <div class="product-image"></div>
+                        <div class="product-info">
+                            <h3>Leather Belt</h3>
+                            <div class="meta">
+                                <span>Finish</span>
+                                <span class="price">₩72,000</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
