@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <style>
+        .swiper1 {
+            width: 600px;
+            height: 300px;
+            border: 1px solid red;
+        }
+
+        .swiper2 {
+            width: 800px;
+            height: 800px;
+            border: 1px solid red;
+        }
+
+        .swiper2 .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+    <title>swiper</title>
+</head>
+
+<body>
+    <div class="swiper swiper1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./img/김가온.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/김예림.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/김하경.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/김현아.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/박민주.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="swiper swiper2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./img/김가온.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/김예림.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/김하경.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/김현아.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/박민주.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        const swiper = new Swiper('.swiper1', {
+            loop: true,
+            direction: 'vertical',
+        });
+        const swiper2 = new Swiper('.swiper2', {
+            loop:true,
+            autoplay: {
+                delay: 1000,
+            },
+        });
+    </script>
+</body>
+
+</html>
