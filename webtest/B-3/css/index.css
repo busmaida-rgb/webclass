@@ -1,0 +1,161 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+a{text-decoration: inherit;color: inherit;}
+img{max-width: 100%;}
+ul{list-style: none;}
+
+html{
+    background-color: #fff;
+    color: #333;
+}
+.popup{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 20px;
+    display: none;
+}
+.popup.on{
+    display: block;
+}
+.popup-ctrl{
+    display: flex;
+    justify-content: flex-end;
+}
+.popup-ctrl>span{
+    cursor: pointer;
+    padding: 8px 16px;
+    border:1px solid #000;
+}
+header{
+    height: 100px;
+    position: relative;
+    z-index: 100;
+    background-color: green;
+}
+header .inner-frame{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.gnb{
+    margin-right: 20px;
+    margin-top: 20px;
+    display: flex;
+}
+.gnb a{
+    display: flex;
+    width: 150px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.gnb>li{
+    height: 50px;
+    overflow: hidden;
+    transition:all 0.5s ease 0s;
+    background-color: #fff;
+}
+.gnb>li:hover{
+    height: 260px;
+}
+.gnb li:hover>a{
+    background-color: darkblue;
+    color: white;
+}
+.station{
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.train{
+    width: 100%;
+    height: 300%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease 0s;
+}
+.train>div{
+    flex: 1;
+    line-height: 0;
+}
+.contents{
+    width: 1200px;
+    height: 200px;
+    border: 1px solid red;
+    margin: 0 auto;
+    display: flex;
+}
+.contents>section{
+    flex: 1;
+    padding: 10px;
+}
+.contents>section>h2{
+    margin-bottom: 10px;
+}
+.notice>li{
+    display: flex;
+    justify-content: space-between;
+}
+.gallery{
+    display: flex;
+    gap: 8px;
+}
+.banner{
+    background: url(../img/banner.jpg) no-repeat 50% 50% / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner>a{
+    background-color: green;
+    padding: 8px 16px;
+    color: #fff;
+}
+footer{
+    height: 100px;
+    background-color: #000;
+}
+footer>.inner-frame{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sns{
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+    line-height: 0;
+}
+.logo-foot{
+    line-height: 0;
+}
+.tabs{
+    display: flex;
+    margin-bottom: 10px;
+}
+.tabs a{
+    padding: 10px;
+}
+.tabs a.on{
+    background-color: #000;
+    color: #fff;
+}
+.tab-contents>ul{
+    display: none;
+}
+.notice.on{
+    display: block;
+}
+.gallery.on{
+    display: flex;
+}

@@ -1,0 +1,176 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+a{text-decoration: inherit;color: inherit;}
+ul{list-style: none;}
+img{max-width: 100%;}
+html{
+    color: #333;
+}
+
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    z-index: 1000;
+    display: none;
+}
+.modal.on{
+    display: block;
+}
+.popup{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #fff;
+    z-index: 1001;
+    padding: 10px;
+    display: none;
+}
+.popup.on{
+    display: block;
+}
+.popup-ctrl{
+    display: flex;
+    justify-content: flex-end;
+}
+#btn-close{
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    height: calc(100vh - 120px);
+}
+header{
+    width: 200px;
+}
+.logo{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.gnb{
+    width: 180px;
+    margin: 0 auto;
+
+}
+.gnb a{
+    display: flex;
+    width: 180px;
+    align-items: center;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.gnb>li{
+    position: relative;
+}
+.gnb ul{
+    position: absolute;
+    left: 180px;
+    color: #fff;
+    top: 0;
+    background-color: #0000009f;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+.gnb>li:hover ul{
+    opacity: 1;
+    pointer-events: auto;
+}
+.gnb li:hover>a{
+    background-color: #000;
+    color: #fff;
+}
+main{
+    width: 400px;
+}
+.banner{
+    display: flex;
+    gap: 10px;
+}
+.banner figure{
+    width: 100px;
+    flex-shrink: 0;
+}
+.banner a{
+    padding: 10px;
+}
+.notice{
+    padding: 10px;
+}
+.notice h2{
+    margin-bottom: 10px;
+}
+.notice li{
+    display: flex;
+    justify-content: space-between;
+}
+.gallery{
+    padding: 10px;
+}
+.gallery h2{
+    margin-bottom: 10px;
+}
+.gallery ul{
+    display: flex;
+    gap: 10px;
+}
+.gallery a{
+    display: flex;
+    flex-direction: column;
+}
+.direct{
+    padding: 10px;
+}
+.direct ul{
+    display: flex;
+    gap: 10px;
+}
+.direct a{
+    display: flex;
+    flex-direction: column;
+}
+.direct img{
+    width: 80px;
+    aspect-ratio: 1/1;
+}
+.station{
+    width: calc(100% - 600px);
+    overflow: hidden;
+}
+.train{
+    width: 300%;
+    height: 100%;
+    transition: all 0.5s ease 0s;
+    display: flex;
+}
+.train img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.train>div{
+    flex: 1;
+    line-height: 0;
+}
+footer{
+    display: flex;
+    height: 120px;
+    background-color: #000;
+    color: #fff;
+    gap: 10px;
+    align-items: center;
+}
+.fmenu{
+    display: flex;
+    gap: 10px;
+}
+.fcon{
+    flex-grow: 1;
+}
